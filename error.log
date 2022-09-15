@@ -1270,3 +1270,91 @@ warning: LF will be replaced by CRLF in index.html.
 The file will have its original line endings in your working directory
 
 
+----------
+
+Thu Sep 15 2022 13:32:53 GMT+0200 (Mitteleuropäische Sommerzeit)
+
+warning: LF will be replaced by CRLF in about.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in assets/bootstrap/css/bootstrap.min.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in assets/bootstrap/js/bootstrap.min.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in assets/css/Features-Image-icons.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in assets/css/Hero-Carousel-images.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in assets/img/team/websiteelement2.svg.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in assets/img/team/websiteelement_cv.svg.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in assets/img/websiteelement_title.svg.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in assets/js/bold-and-bright.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in assets/js/jquery.min.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in contacts.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in error.log.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory
+
+
+----------
+
+Thu Sep 15 2022 13:32:55 GMT+0200 (Mitteleuropäische Sommerzeit)
+
+Logon failed, use ctrl+c to cancel basic credential prompt.
+
+
+----------
+
+Thu Sep 15 2022 13:32:56 GMT+0200 (Mitteleuropäische Sommerzeit)
+
+bash: /dev/tty: No such device or address
+
+
+----------
+
+Thu Sep 15 2022 13:32:56 GMT+0200 (Mitteleuropäische Sommerzeit)
+
+error: failed to execute prompt script (exit code 1)
+
+
+----------
+
+Thu Sep 15 2022 13:32:56 GMT+0200 (Mitteleuropäische Sommerzeit)
+
+stty: 'standard input': Inappropriate ioctl for device
+
+
+----------
+
+Thu Sep 15 2022 13:32:57 GMT+0200 (Mitteleuropäische Sommerzeit)
+
+Logon failed, use ctrl+c to cancel basic credential prompt.
+
+
+----------
+
+Thu Sep 15 2022 13:32:57 GMT+0200 (Mitteleuropäische Sommerzeit)
+
+bash: /dev/tty: No such device or address
+
+
+----------
+
+Thu Sep 15 2022 13:32:57 GMT+0200 (Mitteleuropäische Sommerzeit)
+
+error: failed to execute prompt script (exit code 1)
+
+
+----------
+
+Thu Sep 15 2022 13:32:57 GMT+0200 (Mitteleuropäische Sommerzeit)
+
+stty: 'standard input': Inappropriate ioctl for device
+
+
