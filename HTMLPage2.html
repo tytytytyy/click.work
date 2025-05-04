@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GigaTask 2000</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="screen">
+        <div class="taskbar">
+            <span>🖥️ GigaTask 2000</span>
+        </div>
+
+        <div class="welcome-box">
+            <h1>Welcome, User01!</h1>
+            <p>Click the button to begin labeling and earn micropay!</p>
+            <button id="startTaskBtn">Start Microtasks 💾</button>
+        </div>
+
+        <div id="popup" class="popup">
+            <div class="popup-header">
+                <span>⚠️ New Task Incoming</span>
+                <button id="closePopupBtn">✖</button>
+            </div>
+            <div class="popup-body">
+                <img src="https://via.placeholder.com/200" alt="Task Image">
+                <p>Label this image:</p>
+                <input type="text" id="image-label" placeholder="Type here...">
+                <button id="submitTaskBtn">Submit Task ✅</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
