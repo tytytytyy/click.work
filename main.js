@@ -6,7 +6,7 @@ $(function () {
     let taskCount = 0;
     let wage = 0;
     const ratePerTask = 0.0083; // ~$2/hr at speed
-    let popupInterval = 2000; // Start slow
+    let popupInterval = 3000; // Start slow
 
     let remainingTasks = [...tasks];
     let remainingWorkerQuotes = [...workerQuotes];
@@ -78,19 +78,41 @@ $(function () {
     }
 
     // When a task is completed
-    function completeTask(task, popup) {
-        taskCount++;
-        wage += ratePerTask;
-        $('#taskCount').text(taskCount);
-        $('#wage').text(wage.toFixed(2));
-        popup.remove();
+function completeTask(task, popup) {
+    taskCount++;
+    wage += ratePerTask;
+    $('#taskCount').text(taskCount);
+    $('#wage').text(wage.toFixed(2));
+    popup.remove();
 
-        // Speed up popups (with floor)
-        popupInterval = Math.max(100, popupInterval * 0.85);
+    // Speed up popups (with floor)
+    popupInterval = Math.max(100, popupInterval * 0.85);
 
+    // 5% chance of denial
+    if (Math.random() < 0.05) {  // 5% chance
+        showDenialMessage();
+    } else {
         // Show quote or critique
         Math.random() > 0.5 ? showWorkerQuote() : showCritique();
     }
+}
+
+// Show a denial message (rare event)
+function showDenialMessage() {
+    const denialMessage = document.createElement("div");
+    denialMessage.classList.add("denial-message");
+    denialMessage.innerHTML = `
+        <p>Your submission was denied. Please try again.</p>
+        <p><strong>Note:</strong> Denials occur only about 5% of the time.</p>
+    `;
+    document.body.appendChild(denialMessage);
+
+    setTimeout(() => {
+        denialMessage.classList.add("fade-out");
+        setTimeout(() => denialMessage.remove(), 500);
+    }, 3000);
+}
+
 
     // Show a worker quote (random)
     function showWorkerQuote() {

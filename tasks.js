@@ -215,7 +215,7 @@
   },
   {
     question: "Tag all you see in the image.",
-    content: `<img src="https://freerangestock.com/sample/160722/urban-street-scene-with-diverse-pedestrians.jpg" />
+    content: `<img src="https://thumbs.dreamstime.com/b/busy-street-scene-intersection-hong-kong-february-pedestrians-crossing-man-pushing-cart-boxes-52773831.jpg" />
                   <label><input type="checkbox" /> Person</label><br/>
                   <label><input type="checkbox" /> Animal</label><br/>
                   <label><input type="checkbox" /> Object</label><br/>

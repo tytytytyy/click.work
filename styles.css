@@ -1,7 +1,7 @@
 ﻿/* Body styling */
 body {
   background: #fff;
-  color: #111;
+  color: #111;#
   margin: 0;
   padding: 0;
 }
@@ -14,8 +14,13 @@ body {
 
 .intro h1 {
   font-size: 4rem;
+
   letter-spacing: -1px;
   margin: 0;
+}
+
+.intro h2{
+    font-family: 'Roboto', sans-serif;
 }
 
 .intro p {
@@ -63,6 +68,8 @@ button:hover {
   box-shadow: 3px 3px 0 #000;
   z-index: 100;
   animation: fadein 0.2s ease-in-out;
+    font-family: 'Roboto', sans-serif; /* Roboto for popup text */
+
 }
 
 /* Button row inside popup */
