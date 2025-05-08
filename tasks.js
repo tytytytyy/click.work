@@ -362,6 +362,351 @@
                   <button class="submit-task">No</button>`,
     type: "binary",
   },
+   {
+    question: "Is this a dog?",
+    content: `<img src="https://images.pexels.com/photos/1108095/pexels-photo-1108095.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+              <button class="submit-task">Yes</button>
+              <button class="submit-task">No</button>`,
+    type: "binary",
+  },
+  {
+    question: "Sentiment of: <i>'I don’t mind this at all.'</i>",
+    content: `<button class="submit-task">Positive</button>
+              <button class="submit-task">Neutral</button>
+              <button class="submit-task">Negative</button>`,
+    type: "buttons",
+  },
+  {
+    question: "Select the color of the sky in this image.",
+    content: `<img src="https://images.pexels.com/photos/1170982/pexels-photo-1170982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+              <button class="submit-task">Blue</button>
+              <button class="submit-task">Gray</button>
+              <button class="submit-task">Orange</button>`,
+    type: "buttons",
+  },
+  {
+    question: "Type the sentence: <i>'A picture is worth a thousand words.'</i>",
+    content: `<input type="text" class="typed-input" placeholder="Type here..." />
+              <button class="submit-typed">Submit</button>`,
+    type: "typed",
+    expected: "A picture is worth a thousand words.",
+  },
+  {
+    question: "Enter your favorite color.",
+    content: `<input type="text" class="typed-input" placeholder="Enter your color..." />
+              <button class="submit-typed">Submit</button>`,
+    type: "typed",
+  },
+  {
+    question: "Is there a typo in the sentence: <i>'He go to school everyday.'</i>",
+    content: `<button class="submit-task">Yes</button>
+              <button class="submit-task">No</button>`,
+    type: "binary",
+  },
+  {
+    question: "Classify the text: <i>'The sunset was amazing.'</i>",
+    content: `<button class="submit-task">Weather</button>
+              <button class="submit-task">Nature</button>
+              <button class="submit-task">General</button>`,
+    type: "buttons",
+  },
+  {
+    question: "Type this exactly: <i>Repetitive tasks are common in microwork.</i>",
+    content: `<input type="text" class="typed-input" placeholder="Type here..." />
+              <button class="submit-typed">Submit</button>`,
+    type: "typed",
+    expected: "Repetitive tasks are common in microwork.",
+  },
+  {
+    question: "Identify the object in the image.",
+    content: `<img src="https://images.pexels.com/photos/255974/pexels-photo-255974.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+              <button class="submit-task">Car</button>
+              <button class="submit-task">Tree</button>
+              <button class="submit-task">Building</button>`,
+    type: "buttons",
+  },
+  {
+    question: "Summarize the following text in 1-2 sentences: <i>'The moon is full, and it shines brightly in the sky.'</i>",
+    content: `<input type="text" class="typed-input" placeholder="Summarize the text..." />
+              <button class="submit-typed">Submit</button>`,
+    type: "typed",
+  },
+  {
+    question: "Does this sentence have any grammatical errors: <i>'She don't like ice cream.'</i>",
+    content: `<button class="submit-task">Yes</button>
+              <button class="submit-task">No</button>`,
+    type: "binary",
+  },
+  {
+    question: "Translate the sentence into French: <i>'Good evening, how are you today?'</i>",
+    content: `<input type="text" class="typed-input" placeholder="Translation..." />
+              <button class="submit-typed">Submit</button>`,
+    type: "typed",
+  },
+  {
+    question: "Which category does this text belong to: <i>'The stock prices have been fluctuating lately.'</i>",
+    content: `<button class="submit-task">Finance</button>
+              <button class="submit-task">Sports</button>
+              <button class="submit-task">Technology</button>`,
+    type: "buttons",
+  },
+  {
+    question: "What is the sentiment of the sentence: <i>'I am feeling okay.'</i>",
+    content: `<button class="submit-task">Positive</button>
+              <button class="submit-task">Neutral</button>
+              <button class="submit-task">Negative</button>`,
+    type: "buttons",
+  },
+  {
+    question: "What is a synonym for 'fast'?",
+    content: `<input type="text" class="typed-input" placeholder="Synonym..." />
+              <button class="submit-typed">Submit</button>`,
+    type: "typed",
+  },
+  {
+    question: "Is the text duplicated: <i>'Hello, how are you? Hello, how are you?'</i>",
+    content: `<button class="submit-task">Yes</button>
+              <button class="submit-task">No</button>`,
+    type: "binary",
+  },
+  {
+    question: "Classify the sentiment of this text: <i>'I am feeling down today.'</i>",
+    content: `<button class="submit-task">Positive</button>
+              <button class="submit-task">Neutral</button>
+              <button class="submit-task">Negative</button>`,
+    type: "buttons",
+  },
+  {
+    question: "Rewrite the following sentence: <i>'The dog is barking loudly.'</i>",
+    content: `<input type="text" class="typed-input" placeholder="Rewrite sentence..." />
+              <button class="submit-typed">Submit</button>`,
+    type: "typed",
+  },
+  {
+    question: "Identify and correct the typo in this sentence: <i>'The quik brown fox.'</i>",
+    content: `<input type="text" class="typed-input" placeholder="Correct sentence..." />
+              <button class="submit-typed">Submit</button>`,
+    type: "typed",
+  },
+  {
+    question: "Fill in the blank: <i>'The ___ is playing with the ball.'</i>",
+    content: `<input type="text" class="typed-input" placeholder="Fill in the blank..." />
+              <button class="submit-typed">Submit</button>`,
+    type: "typed",
+  },
+  {
+    question: "Is this a cat?",
+    content: `<img src="https://picsum.photos/300/300" />
+              <button class="submit-task">Yes</button>
+              <button class="submit-task">No</button>`,
+    type: "binary",
+  },
+  {
+    question: "Type this exactly: <i>Microtasks are repetitive but necessary.</i>",
+    content: `<input type="text" class="typed-input" placeholder="Type here..." />
+              <button class="submit-typed">Submit</button>`,
+    type: "typed",
+    expected: "Microtasks are repetitive but necessary.",
+  },
+  {
+    question: "Is this task mentally demanding?",
+    content: `<button class="submit-task">Yes</button>
+              <button class="submit-task">No</button>`,
+    type: "binary",
+  },
+  {
+    question: "Does this task make you feel like a machine?",
+    content: `<button class="submit-task">Yes</button>
+              <button class="submit-task">No</button>`,
+    type: "binary",
+  },
+  {
+    question: "Type this exactly: <i>The system is learning over time.</i>",
+    content: `<input type="text" class="typed-input" placeholder="Type here..." />
+              <button class="submit-typed">Submit</button>`,
+    type: "typed",
+    expected: "The system is learning over time.",
+  },
+  {
+    question: "Tag the objects in this image.",
+    content: `<img src="https://live.staticflickr.com/3459/3877534599_3c83d9570d_b.jpg" />
+              <label><input type="checkbox" /> Person</label><br/>
+              <label><input type="checkbox" /> Animal</label><br/>
+              <label><input type="checkbox" /> Object</label><br/>
+              <button class="submit-task">Submit</button>`,
+    type: "binary",
+  },
+  {
+    question: "Is this language offensive: <i>'You are terrible.'</i>",
+    content: `<button class="submit-task">Yes</button>
+              <button class="submit-task">No</button>`,
+    type: "binary",
+  },
+   {
+    question: "Is the object in the image a chair?",
+    content: `<img src="https://picsum.photos/300/300" />
+              <button class="submit-task">Yes</button>
+              <button class="submit-task">No</button>`,
+    type: "binary",
+  },
+  {
+    question: "Tag the objects in this image.",
+    content: `<img src="https://picsum.photos/300/300" />
+              <label><input type="checkbox" /> Person</label><br/>
+              <label><input type="checkbox" /> Object</label><br/>
+              <label><input type="checkbox" /> Animal</label><br/>
+              <button class="submit-task">Submit</button>`,
+    type: "binary",
+  },
+  {
+    question: "Is this a car?",
+    content: `<img src="https://picsum.photos/300/300" />
+              <button class="submit-task">Yes</button>
+              <button class="submit-task">No</button>`,
+    type: "binary",
+  },
+  {
+    question: "Is this a dog?",
+    content: `<img src="https://picsum.photos/300/300" />
+              <button class="submit-task">Yes</button>
+              <button class="submit-task">No</button>`,
+    type: "binary",
+  },
+  
+  // Text-based tasks
+  {
+    question: "What category does this text belong to: <i>'The football match ended in a draw.'</i>",
+    content: `<button class="submit-task">Sports</button>
+              <button class="submit-task">News</button>
+              <button class="submit-task">Entertainment</button>`,
+    type: "buttons",
+  },
+  {
+    question: "Sentiment of: <i>'I'm feeling alright.'</i>",
+    content: `<button class="submit-task">Positive</button>
+              <button class="submit-task">Neutral</button>
+              <button class="submit-task">Negative</button>`,
+    type: "buttons",
+  },
+  {
+    question: "Is there a spelling mistake in the following text: <i>'She is a grat dancer.'</i>",
+    content: `<button class="submit-task">Yes</button>
+              <button class="submit-task">No</button>`,
+    type: "binary",
+  },
+  {
+    question: "Rewrite the following sentence in your own words: <i>'The sun is shining bright.'</i>",
+    content: `<input type="text" class="typed-input" placeholder="Rewrite sentence..." />
+              <button class="submit-typed">Submit</button>`,
+    type: "typed",
+  },
+  {
+    question: "Translate the following sentence into French: <i>'How are you today?'</i>",
+    content: `<input type="text" class="typed-input" placeholder="Translation..." />
+              <button class="submit-typed">Submit</button>`,
+    type: "typed",
+  },
+  {
+    question: "Summarize the following text in 1-2 sentences: <i>'The sun sets over the ocean, painting the sky in hues of orange and pink.'</i>",
+    content: `<input type="text" class="typed-input" placeholder="Summarize the text..." />
+              <button class="submit-typed">Submit</button>`,
+    type: "typed",
+  },
+  {
+    question: "Extract the main keywords from the following sentence: <i>'The book explores the mysteries of the universe.'</i>",
+    content: `<input type="text" class="typed-input" placeholder="Keywords..." />
+              <button class="submit-typed">Submit</button>`,
+    type: "typed",
+  },
+  {
+    question: "Complete the sentence: <i>'The ___ jumped over the fence.'</i>",
+    content: `<input type="text" class="typed-input" placeholder="Fill in the blank..." />
+              <button class="submit-typed">Submit</button>`,
+    type: "typed",
+  },
+  {
+    question: "Is this text grammatically correct? <i>'She dont want to leave.'</i>",
+    content: `<button class="submit-task">Yes</button>
+              <button class="submit-task">No</button>`,
+    type: "binary",
+  },
+  {
+    question: "Does the following text contain any typos? <i>'The quik brown fox jumped.' </i>",
+    content: `<button class="submit-task">Yes</button>
+              <button class="submit-task">No</button>`,
+    type: "binary",
+  },
+  {
+    question: "Tag the relevance of this text: <i>'The weather forecast predicts rain tomorrow.'</i>",
+    content: `<button class="submit-task">Relevant</button>
+              <button class="submit-task">Not Relevant</button>`,
+    type: "binary",
+  },
+  {
+    question: "Identify and correct the typo in this sentence: <i>'The gril is walking down the street.'</i>",
+    content: `<input type="text" class="typed-input" placeholder="Correct sentence..." />
+              <button class="submit-typed">Submit</button>`,
+    type: "typed",
+  },
+  {
+    question: "Tag the sentiment of this text: <i>'I am feeling really tired today.'</i>",
+    content: `<button class="submit-task">Positive</button>
+              <button class="submit-task">Neutral</button>
+              <button class="submit-task">Negative</button>`,
+    type: "buttons",
+  },
+  {
+    question: "Is this a repeated sentence? <i>'The dog barked. The dog barked.'</i>",
+    content: `<button class="submit-task">Yes</button>
+              <button class="submit-task">No</button>`,
+    type: "binary",
+  },
+  {
+    question: "How would you describe the difficulty level of this task?",
+    content: `<button class="submit-task">Easy</button>
+              <button class="submit-task">Moderate</button>
+              <button class="submit-task">Difficult</button>`,
+    type: "buttons",
+  },
+  {
+    question: "Is this text confusing to read? <i>'She quickly ran, not because she had to, but because she wanted to.'</i>",
+    content: `<button class="submit-task">Yes</button>
+              <button class="submit-task">No</button>`,
+    type: "binary",
+  },
+  {
+    question: "Do you find this task too repetitive?",
+    content: `<button class="submit-task">Yes</button>
+              <button class="submit-task">No</button>`,
+    type: "binary",
+  },
+  {
+    question: "Classify the following text: <i>'I need to find a good recipe for dinner.'</i>",
+    content: `<button class="submit-task">Cooking</button>
+              <button class="submit-task">Lifestyle</button>
+              <button class="submit-task">Health</button>`,
+    type: "buttons",
+  },
+  {
+    question: "What category does this text belong to: <i>'The latest superhero movie broke box office records.'</i>",
+    content: `<button class="submit-task">Entertainment</button>
+              <button class="submit-task">News</button>
+              <button class="submit-task">Sports</button>`,
+    type: "buttons",
+  },
+  {
+    question: "Type the following sentence exactly: <i>'A journey of a thousand miles begins with a single step.'</i>",
+    content: `<input type="text" class="typed-input" placeholder="Type here..." />
+              <button class="submit-typed">Submit</button>`,
+    type: "typed",
+    expected: "A journey of a thousand miles begins with a single step.",
+  },
+  {
+    question: "Is there any grammatical error in the following sentence: <i>'He have been to the store.'</i>",
+    content: `<button class="submit-task">Yes</button>
+              <button class="submit-task">No</button>`,
+    type: "binary",
+  },
 ];
 // Export the tasks array
 export { tasks };

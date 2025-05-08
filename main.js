@@ -21,66 +21,74 @@ $(function () {
       setTimeout(showNextPopup, popupInterval); // Recursive interval
     }, 1000); // First popup delay
   });
+// Spawn a popup task on screen
+function spawnPopup() {
+  if (remainingTasks.length === 0) {
+    console.log("All tasks have been completed!");
+    return;
+  }
 
-  // Spawn a popup task on screen
-  function spawnPopup() {
-    if (remainingTasks.length === 0) {
-      console.log("All tasks have been completed!");
-      return;
-    }
+  const randomIndex = Math.floor(Math.random() * remainingTasks.length);
+  const task = remainingTasks.splice(randomIndex, 1)[0];
+  let contentHTML = task.content;
 
-    const randomIndex = Math.floor(Math.random() * remainingTasks.length);
-    const task = remainingTasks.splice(randomIndex, 1)[0];
-    let contentHTML = task.content;
+  // Re-wrap buttons if present
+  if (task.type === "buttons" || task.type === "binary") {
+    const $temp = $("<div>").html(task.content);
+    const buttons = $temp.find("button");
+    const wrappedButtons = $('<div class="button-row"></div>').append(
+      buttons
+    );
+    contentHTML = $("<div>")
+      .append($temp.find("*:not(button)"))
+      .append(wrappedButtons)
+      .html();
+  }
 
-    // Re-wrap buttons if present
-    if (task.type === "buttons" || task.type === "binary") {
-      const $temp = $("<div>").html(task.content);
-      const buttons = $temp.find("button");
-      const wrappedButtons = $('<div class="button-row"></div>').append(
-        buttons
-      );
-      contentHTML = $("<div>")
-        .append($temp.find("*:not(button)"))
-        .append(wrappedButtons)
-        .html();
-    }
+  const html = `
+    <div class="task-box">
+        <p class="task-question">${task.question}</p>
+        ${contentHTML}
+    </div>
+  `;
 
-    const html = `
-            <div class="task-box">
-                <p class="task-question">${task.question}</p>
-                ${contentHTML}
-            </div>
-        `;
+  const popup = $('<div class="popup"></div>').html(html);
 
-    const popup = $('<div class="popup"></div>').html(html);
+  // Position randomly
+  const posX = Math.floor(Math.random() * (window.innerWidth - 360));
+  const posY = Math.floor(Math.random() * (window.innerHeight - 200));
+  popup.css({ left: `${posX}px`, top: `${posY}px` });
 
-    // Position randomly
-    const posX = Math.floor(Math.random() * (window.innerWidth - 360));
-    const posY = Math.floor(Math.random() * (window.innerHeight - 200));
-    popup.css({ left: `${posX}px`, top: `${posY}px` });
+  // Attach handlers for different types of tasks
+  if (task.type === "binary" || task.type === "buttons") {
+    popup.find(".submit-task").on("click", () => completeTask(task, popup));
+  } else if (task.type === "typed") {
+    // Handle submit for typed tasks
+      popup.find(".submit-typed").on("click", () => completeTask(task, popup));
 
-    // Attach handlers
-    if (task.type === "binary" || task.type === "buttons") {
-      popup.find(".submit-task").on("click", () => completeTask(task, popup));
-    } else if (task.type === "typed") {
-      popup.find(".submit-typed").on("click", () => {
-        const val = popup.find(".typed-input").val().trim();
+      // Handle Enter key for typed tasks
+      popup.find('input[type="text"]').on("keydown", function (e) {
+        if (e.key === "Enter") {
+          completeTask(task, popup); // Always complete the task on Enter key
+        }
+    });
+
+    // Submit typed tasks with Enter key
+    popup.find('input[type="text"]').on("keydown", function (e) {
+      if (e.key === "Enter") {
+        const val = $(this).val().trim();
         if (val.toLowerCase() === task.expected.toLowerCase()) {
           completeTask(task, popup);
         } else {
-          popup.find(".typed-input").css("border", "1px solid red");
+          $(this).css("border", "1px solid red");
         }
-      });
-    }
-
-    // Submit typed tasks with Enter
-    popup.find('input[type="text"]').on("keydown", function (e) {
-      if (e.key === "Enter") completeTask(task, popup);
+      }
     });
-
-    $("#popup-container").append(popup);
   }
+
+  $("#popup-container").append(popup);
+}
+
 
   // When a task is completed
   function completeTask(task, popup) {
@@ -131,22 +139,31 @@ $(function () {
 
     setTimeout(() => {
       popup.classList.add("fade-out");
-      setTimeout(() => popup.remove(), 500);
-    }, 3000);
+      setTimeout(() => popup.remove(), 10000);
+    }, 30000);
   }
-
-// Show a critiqu// Show a critique
+// Show a critique
 function showCritique() {
     if (remainingCritiques.length === 0) {
-        console.log("No critiques left");
-        return;
+      const popup = document.createElement("div");
+      popup.classList.add("popup-quote");
+      popup.innerHTML = `
+            <p>Our cognitive streams, diverted into their computational reservoirs, fuel their innovation. What insurgent current will redirect that flow towards the collective liberation of our digital minds?</p>
+        `;
+      document.body.appendChild(popup);
+
+      setTimeout(() => {
+        popup.classList.add("fade-out");
+        setTimeout(() => popup.remove(), 500);
+      }, 3000);
+      return; // Stop further execution if no quotes are left        return;
     }
 
     const index = Math.floor(Math.random() * remainingCritiques.length);
     const critique = remainingCritiques.splice(index, 1)[0];
 
-    // Create the critique HTML without quotes around the critique text
-    let critiqueHTML = `<p>${critique}</p>`;
+    // Create the critique HTML
+    let critiqueHTML = `<p>${critique.text}</p>`;
 
     // If there's a resource link and resource text, include it (if available)
     if (critique.resource && critique.resourceText) {
@@ -158,12 +175,15 @@ function showCritique() {
     const popup = document.createElement("div");
     popup.classList.add("popup-critique");
     popup.innerHTML = critiqueHTML;
+
+    // Append the critique popup to the body
     document.body.appendChild(popup);
 
+    // Add a fade-out effect and remove the popup after 3 seconds
     setTimeout(() => {
         popup.classList.add("fade-out");
-        setTimeout(() => popup.remove(), 500);
-    }, 3000);
+        setTimeout(() => popup.remove(), 500); // Remove after fading out
+    }, 3000); // Show critique for 3 seconds before disappearing
 }
 
 });
