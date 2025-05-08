@@ -356,7 +356,7 @@
     type: "buttons",
   },
   {
-    question: "Is this a intelligence?",
+    question: "Is this intelligence?",
     content: `<img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Racknitz_-_The_Turk_3.jpg" />
                   <button class="submit-task">Yes</button>
                   <button class="submit-task">No</button>`,
@@ -544,14 +544,14 @@
   },
    {
     question: "Is the object in the image a chair?",
-    content: `<img src="https://picsum.photos/300/300" />
+    content: `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCGhinAXJkzSs3vBeIbogdTssRU1OR8jtOkQ&s" />
               <button class="submit-task">Yes</button>
               <button class="submit-task">No</button>`,
     type: "binary",
   },
   {
     question: "Tag the objects in this image.",
-    content: `<img src="https://picsum.photos/300/300" />
+    content: `<img src="https://picsum.photos/200/300" />
               <label><input type="checkbox" /> Person</label><br/>
               <label><input type="checkbox" /> Object</label><br/>
               <label><input type="checkbox" /> Animal</label><br/>
@@ -560,7 +560,7 @@
   },
   {
     question: "Is this a car?",
-    content: `<img src="https://picsum.photos/300/300" />
+    content: `<img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Car_pictogram.svg" />
               <button class="submit-task">Yes</button>
               <button class="submit-task">No</button>`,
     type: "binary",
@@ -572,9 +572,7 @@
               <button class="submit-task">No</button>`,
     type: "binary",
   },
-  
-  // Text-based tasks
-  {
+    {
     question: "What category does this text belong to: <i>'The football match ended in a draw.'</i>",
     content: `<button class="submit-task">Sports</button>
               <button class="submit-task">News</button>
@@ -707,6 +705,111 @@
               <button class="submit-task">No</button>`,
     type: "binary",
   },
+   {
+    question: "Does this image show a tree?",
+    content: `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTReco54-5Ko7cjj6EaGiQpEFnkqHa-0n7Cjw&s" />
+              <button class="submit-task">Yes</button>
+              <button class="submit-task">No</button>`,
+    type: "binary",
+  },
+  {
+    question: "Categorize this headline: <i>'Government passes new economic reform.'</i>",
+    content: `<button class="submit-task">Politics</button>
+              <button class="submit-task">Economy</button>
+              <button class="submit-task">World</button>`,
+    type: "buttons",
+  },
+  {
+    question: "Sentiment of: <i>'I absolutely love this product!'</i>",
+    content: `<button class="submit-task">Positive</button>
+              <button class="submit-task">Neutral</button>
+              <button class="submit-task">Negative</button>`,
+    type: "buttons",
+  },
+  {
+    question: "Is this a valid receipt?",
+    content: `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb8fpoRm9_dTpCnBnTdTDNhquCXKxzCfGjgw&s" />
+              <button class="submit-task">Yes</button>
+              <button class="submit-task">No</button>`,
+    type: "binary",
+  },
+  {
+    question: "Topic of: <i>'New iPhone model launched today.'</i>",
+    content: `<button class="submit-task">Technology</button>
+              <button class="submit-task">Business</button>
+              <button class="submit-task">Lifestyle</button>`,
+    type: "buttons",
+  },
+  {
+    question: "What emotion best fits: <i>'I can’t take this anymore.'</i>",
+    content: `<button class="submit-task">Anger</button>
+              <button class="submit-task">Sadness</button>
+              <button class="submit-task">Frustration</button>`,
+    type: "buttons",
+  },
+  {
+    question: "Does this show a product?",
+    content: `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdHGNc2TCWjrhH-L9JfGJcI5K3Qq0P_xc0wg&s" />
+              <button class="submit-task">Yes</button>
+              <button class="submit-task">No</button>`,
+    type: "binary",
+  },
+  {
+  question: "Is this a bicycle?",
+  content: `<img src="https://picsum.photos/300/301" />
+            <button class="submit-task">Yes</button>
+            <button class="submit-task">No</button>`,
+  type: "binary",
+},
+{
+  question: "Does this review express a positive sentiment? '<i>I absolutely loved this product!</i>'",
+  content: `<button class="submit-task">Yes</button>
+            <button class="submit-task">No</button>`,
+  type: "binary",
+},
+{
+  question: "What category best fits this sentence: '<i>The election results were announced today.'</i>'",
+  content: `<button class="submit-task">Politics</button>
+            <button class="submit-task">Entertainment</button>
+            <button class="submit-task">Technology</button>`,
+  type: "buttons",
+},
+{
+  question: "Identify the emotion: '<i>I can't believe this happened! I'm so angry.'</i>'",
+  content: `<button class="submit-task">Happy</button>
+            <button class="submit-task">Sad</button>
+            <button class="submit-task">Angry</button>
+            <button class="submit-task">Surprised</button>`,
+  type: "buttons",
+},
+{
+  question: "Classify this image:",
+  content: `<img src="https://picsum.photos/300/200" />
+            <button class="submit-task">Animal</button>
+            <button class="submit-task">Vehicle</button>
+            <button class="submit-task">Building</button>`,
+  type: "buttons",
+},
+{
+  question: "Is the text '<i>This movie was better than I expected.</i>' sarcastic?",
+  content: `<button class="submit-task">Yes</button>
+            <button class="submit-task">No</button>`,
+  type: "binary",
+},
+{
+  question: "How relevant is this ad to 'running shoes': '<i>Buy the newest sportswear now.'</i>'",
+  content: `<button class="submit-task">Highly relevant</button>
+            <button class="submit-task">Somewhat relevant</button>
+            <button class="submit-task">Not relevant</button>`,
+  type: "buttons",
+},
+{
+  question: "Is this tweet offensive? '<i>You people are so dumb it's laughable.'</i>'",
+  content: `<button class="submit-task">Yes</button>
+            <button class="submit-task">No</button>`,
+  type: "binary",
+}
+
 ];
 // Export the tasks array
 export { tasks };
