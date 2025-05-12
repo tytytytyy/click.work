@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>click.work</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <div class="intro">
+        <h1>click.work</h1>
+        <h2>Welcome, User01!</h2>
+        <p>Click the button to begin labeling and earn micropay!</p>
+        <button id="startBtn">begin</button>
+    </div>
+
+    <div id="popup-container"></div>
+
+    <div id="wage-counter">
+        tasks completed: <span id="taskCount">0</span> &mdash; earned: $<span id="wage">0.00</span>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

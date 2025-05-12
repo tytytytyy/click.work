@@ -1,0 +1,250 @@
+﻿/* Body styling */
+body {
+  background: #fff;
+  color: #111;#
+  margin: 0;
+  padding: 0;
+}
+
+/* Intro section */
+.intro {
+  text-align: center;
+  padding-top: 20vh;
+}
+
+.intro h1 {
+  font-size: 4rem;
+
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+.intro h2{
+    font-family: 'Roboto', sans-serif;
+}
+
+.intro p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Button styling */
+button {
+  background: none;
+  border: 1px solid #111;
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-transform: lowercase;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #111;
+  color: #fff;
+}
+
+/* Popup container */
+#popup-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+/* Main popup styling */
+.popup {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #111;
+  padding: 1.5rem;
+  min-width: 280px;
+  max-width: 600px;
+  box-shadow: 3px 3px 0 #000;
+  z-index: 100;
+  animation: fadein 0.2s ease-in-out;
+    font-family: 'Roboto', sans-serif; /* Roboto for popup text */
+
+}
+
+/* Button row inside popup */
+.button-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.button-row button {
+  white-space: nowrap;
+}
+
+/* Input styling inside popup */
+.popup input[type="text"] {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #111;
+  font-size: 1rem;
+  padding: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+/* Critique popup styling */
+.critique-popup,
+.popup-quote,
+.popup-critique {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border: 1px solid #000;
+  box-shadow: 2px 2px 0 #000;
+  padding: 1rem 1.5rem;
+  font-size: 0.95rem;
+  font-style: italic;
+  z-index: 9999;
+  opacity: 1;
+  pointer-events: all; /* Ensure interactions are active */
+  text-align: center;
+  color: #333;
+  font-family: 'Roboto', sans-serif; /* Clean sans-serif font */
+  transition: opacity 0.5s ease; /* Only fade opacity */
+}
+
+/* Critique and Quote Popup Fade-out */
+.popup-quote.fade-out,
+.popup-critique.fade-out {
+  opacity: 0;
+  pointer-events: none; /* Disable interactions while fading out */
+}
+
+/* Styling for the resource link in critiques and quotes */
+.popup-quote a,
+.popup-critique a {
+  color: #ff4081;  /* Bright pink for a bold, avant-garde look */
+  text-decoration: none;  /* Remove underline to maintain a clean look */
+  font-weight: 600;  /* Bold weight for a strong presence */
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;  /* Slight spacing for a cleaner, digital feel */
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 10000;  /* Ensures the link is above other elements */
+}
+
+/* Hover effect: underline with a growing line from the left */
+.popup-quote a:hover,
+.popup-critique a:hover {
+  color: #00bcd4;  /* Change to a cyan color when hovered */
+  text-decoration: none;  /* No default underline */
+}
+
+.popup-quote a:hover::before,
+.popup-critique a:hover::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #00bcd4;  /* Cyan line for hover */
+  transform: scaleX(0);  /* Initially hidden */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* On focus, create a subtle digital glow effect */
+.popup-quote a:focus,
+.popup-critique a:focus {
+  outline: none;  /* Remove the default outline */
+  box-shadow: 0 0 8px 2px rgba(0, 188, 212, 0.5);  /* Cyan glow */
+}
+
+/* Subtle animation on first appearance */
+.popup-quote a,
+.popup-critique a {
+  animation: linkFadeIn 1s ease-out forwards; /* Fade-in with a delay */
+}
+
+@keyframes linkFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ensure popups are interactive, z-index for clickability */
+.popup-quote,
+.popup-critique {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border: 1px solid #000;
+  box-shadow: 2px 2px 0 #000;
+  padding: 1rem 1.5rem;
+  font-size: 0.95rem;
+  font-style: italic;
+  z-index: 9999; /* Ensure the popups are above everything else */
+  opacity: 1;
+  transition: opacity 0.5s ease; /* Only opacity transition */
+  pointer-events: all;  /* Ensures that the popup and its contents (including links) are interactive */
+  text-align: center;
+}
+
+/* Subtle animation for fade-in */
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* Wage counter at the bottom */
+#wage-counter {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  font-size: 0.9rem;
+  background: #fff;
+  border: 1px solid #000;
+  padding: 0.5rem 1rem;
+  box-shadow: 2px 2px 0 #000;
+  z-index: 200;
+  font-family: monospace;
+}
+
+/* Image styling */
+img {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Keyframe animation for fade-in effect */
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
