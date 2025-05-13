@@ -1,6 +1,6 @@
-﻿import { tasks } from "./tasks.js";
-import { workerQuotes } from "./workersquotes.js";
-import { critiques } from "./critiques.js";
+﻿import { task } from "./data/tasks.js"; 
+import { workerQuotes } from "./data/workersquotes.js";
+import { critiques } from "./data/critiques.js";
 
 $(function () {
   let taskCount = 0;
