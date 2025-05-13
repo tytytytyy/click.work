@@ -1,4 +1,4 @@
-﻿import { task } from "./data/tasks.js"; 
+﻿import { tasks } from "./data/tasks.js"; 
 import { workerQuotes } from "./data/workersquotes.js";
 import { critiques } from "./data/critiques.js";
 
